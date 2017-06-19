@@ -1,3 +1,6 @@
+import React from 'react';
+import Page from './page';
+
 const Direction = {
   BACK: 'back',
   BACKWARD: 'back',
@@ -38,17 +41,17 @@ function combinePages(pages) {
   const formattedPages = {};
 
   for (let key in pages) {
+    const slug = sanitizeSlug(key);
+    const page = pages[key];
+
     formattedPages[key] = {
       id: key,
-      slug: sanitizeSlug(key),
-      component: configs[key]
+      slug: slug,
+      component: pages[key]
     };
   }
 
-  console.debug('formattedPages', formattedPages);
-
   this._pages = Object.assign({}, this._pages, formattedPages);
-  console.debug('pages', this._pages);
 };
 
 /**

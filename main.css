@@ -1,3 +1,18 @@
+html, body, #app-root, .app-component {
+  height: 100%;
+  min-height: 100%;
+}
+
+.app-header {
+  height: 10%;
+  max-height: 10%;
+}
+
+.app-component > .container {
+  min-height: 90%;
+  height: 90%;
+}
+
 .app-component {
   padding-bottom: 25px;
 }

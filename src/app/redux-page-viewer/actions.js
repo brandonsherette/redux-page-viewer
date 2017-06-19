@@ -1,9 +1,11 @@
 import PageUtil from './page.util';
 
-export const ActionTypes = {
+const ActionTypes = {
   GOTO_PAGE: 'REDUX_PAGE_VIEWER_GOTO_PAGE',
   INIT: 'REDUX_PAGE_VIEWER_INIT'
 };
+
+export default ActionTypes;
 
 export const gotoPage = (page) => {
   // find page 
@@ -11,9 +13,7 @@ export const gotoPage = (page) => {
 
   return {
     type: ActionTypes.GOTO_PAGE,
-    payload: {
-      page: nextPage
-    }
+    payload: nextPage
   };
 };
 

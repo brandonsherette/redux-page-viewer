@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Page = ({children, page}) => (
-  <section className="page">
+const Page = ({children}) => (
+  <div className="page">
     {children}
-  </section>
+  </div>
 );
+
+export default Page;
