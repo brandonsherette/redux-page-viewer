@@ -24,8 +24,8 @@ export const init = ({page, pageProps}) => {
   return { 
     type: ActionTypes.INIT, 
     payload: { 
-      page: PageUtil.getPage(page), 
-      pageProps
+      page: PageUtil.getPage(page) || PageUtil.getFirstPage(), 
+      pageProps: pageProps || null
     } 
   };
 };

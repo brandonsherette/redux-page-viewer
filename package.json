@@ -1,6 +1,6 @@
 {
   "name": "redux-page-viewer",
-  "version": "0.0.3-rc1",
+  "version": "0.0.3-rc2",
   "description": "Redux Page Viewer",
   "main": "dist/redux-page-viewer.js",
   "scripts": {
