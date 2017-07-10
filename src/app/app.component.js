@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { PageViewer } from './redux-page-viewer/index';
+import { PageViewer, init as initPageViewer } from './redux-page-viewer/index';
 
 // combine pages
 import pageConfig from './page.config';
 
 class AppComponent extends Component {
+    componentDidMount() {
+      this.props.loadFirstPage();
+    }
+
   render() {
     return (
       <div className="app-component">
@@ -26,7 +30,14 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    loadFirstPage: () => { dispatch(initPageViewer({
+      page: 'home',
+      pageProps: {
+        greeting: 'Hello, Stranger!'
+      }
+    }))}
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(AppComponent);

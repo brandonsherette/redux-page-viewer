@@ -18,7 +18,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    gotoHome: () => { dispatch(gotoPage('Home'))}
+    gotoHome: () => { dispatch(gotoPage('Home', {
+      greeting: 'Welcome Back, Stranger!'
+    }))}
   };
 };
 
