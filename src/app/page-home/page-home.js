@@ -15,7 +15,11 @@ const PageHome = ({greeting, gotoAbout}) => (
 );
 
 PageHome.propTypes = {
-  greeting: PropTypes.string.isRequired
+  greeting: PropTypes.string
+};
+
+PageHome.defaultProps = {
+  greeting: 'Hello World'
 };
 
 const mapStateToProps = (state) => {

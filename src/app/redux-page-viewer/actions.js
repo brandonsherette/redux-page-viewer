@@ -20,11 +20,11 @@ export const gotoPage = (page, pageProps = null) => {
   };
 };
 
-export const init = ({page, pageProps}) => {
+export const init = (page = null, pageProps = null) => {
   return { 
     type: ActionTypes.INIT, 
     payload: { 
-      page: PageUtil.getPage(page) || PageUtil.getFirstPage(), 
+      page: (page) ? PageUtil.getPage(page) : PageUtil.getFirstPage(), 
       pageProps: pageProps || null
     } 
   };

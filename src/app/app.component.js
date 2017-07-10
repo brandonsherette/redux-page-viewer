@@ -31,12 +31,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    loadFirstPage: () => { dispatch(initPageViewer({
-      page: 'home',
-      pageProps: {
+    loadFirstPage: () => { dispatch(initPageViewer('home', {
         greeting: 'Hello, Stranger!'
       }
-    }))}
+    ))}
+    /*loadFirstPage: () => { dispatch(initPageViewer()) }*/
   };
 };
 

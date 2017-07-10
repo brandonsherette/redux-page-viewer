@@ -5,6 +5,7 @@ Allows for transitioning from various app pages without the need of a router.
 ## Versions
 **v0.0.3-rc2**
 - Fixed issue with init action without a page specified.
+- Fixed other issues with init action.
 
 **v0.0.3-rc1**
 - Added page props feature which allows the ability to send props to pages.
