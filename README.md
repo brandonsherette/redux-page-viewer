@@ -27,19 +27,17 @@ Allows for transitioning from various app pages without the need of a router.
       greeting: 'Welcome Back, Stranger!'
     }))
     ```
-- init({ page : String|null, pageProps : Object|null })
+- init(page : String|null, pageProps : Object|null)
   - Example with first found page as starting page.
     ```javascript
     dispatch(init());
     ```
   - Example sending initial starting page and props.
     ```javascript
-    dispatch(init({
-      page : 'home',
-      pageProps : {
+    dispatch(init('home', {
         greeting: 'Welcome Back, Stranger!'
       }
-    }));
+    ));
     ```
 ## Examples
 Check **src/app/** for examples.
